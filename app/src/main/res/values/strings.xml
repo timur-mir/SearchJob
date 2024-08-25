@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SearchJob</string>
+    <string name="hello_blank_fragment">Login</string>
+    <string name="head_title">Для входа в систему введите логин и пароль</string>
+    <string name="head2_title">Картинка_заголовок</string>
+    <string name="email_hint">Введите адрес электронной почты</string>
+    <string name="password_hint">Введите пароль</string>
+    <string name="agree_checkbox">Согласен на обработку данных</string>
+    <string name="enter">Войти</string>
+</resources>

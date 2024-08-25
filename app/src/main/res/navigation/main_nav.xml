@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="home.howework.searchjob.presentation.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/login_fragment">
+        <action
+            android:id="@+id/action_loginFragment_to_confirmationFragment"
+            app:destination="@id/confirmationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/confirmationFragment"
+        android:name="home.howework.searchjob.presentation.ConfirmationFragment"
+        android:label="ConfirmationFragment"
+        tools:layout="@layout/confirmation_fragment">
+        <action
+            android:id="@+id/action_confirmationFragment_to_searchFragment2"
+            app:destination="@id/searchFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment2"
+        android:name="home.howework.searchjob.presentation.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/search_fragment"/>
+    <fragment
+        android:id="@+id/favoriteFragment2"
+        android:name="home.howework.searchjob.presentation.FavoriteFragment"
+        android:label="FavoriteFragment"
+        tools:layout="@layout/favorite_fragment"/>
+
+</navigation>

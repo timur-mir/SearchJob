@@ -1,5 +1,6 @@
 package home.howework.searchjob.presentation
 
+import android.os.Build
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -24,6 +25,8 @@ class ConfirmationFragment:Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        Build.VERSION_CODES()
+
         val sequrityCode = StringBuilder()
         binding.editDig2.isCursorVisible = true
         binding.editDig1.requestFocus()

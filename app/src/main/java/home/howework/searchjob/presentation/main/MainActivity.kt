@@ -1,4 +1,4 @@
-package home.howework.searchjob.presentation
+package home.howework.searchjob.presentation.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,7 +7,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import home.howework.searchjob.R
 import home.howework.searchjob.databinding.ActivityMainBinding
-import home.howework.searchjob.presentation.MainActivity.BottomPanel.panelNav
+import home.howework.searchjob.presentation.main.MainActivity.BottomPanel.panelNav
 
 class MainActivity : AppCompatActivity() {
     private var _binding: ActivityMainBinding? = null

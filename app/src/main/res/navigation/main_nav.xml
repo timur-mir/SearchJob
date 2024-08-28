@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="home.howework.searchjob.presentation.LoginFragment"
+        android:name="home.howework.searchjob.presentation.main.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/login_fragment">
         <action
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/confirmationFragment"
-        android:name="home.howework.searchjob.presentation.ConfirmationFragment"
+        android:name="home.howework.searchjob.presentation.main.ConfirmationFragment"
         android:label="ConfirmationFragment"
         tools:layout="@layout/confirmation_fragment">
         <action
@@ -26,13 +26,37 @@
     </fragment>
     <fragment
         android:id="@+id/searchFragment2"
-        android:name="home.howework.searchjob.presentation.SearchFragment"
+        android:name="home.howework.searchjob.presentation.main.SearchFragment"
         android:label="SearchFragment"
-        tools:layout="@layout/search_fragment"/>
+        tools:layout="@layout/search_fragment">
+        <action
+            android:id="@+id/action_searchFragment2_to_fullVacanciesFragment"
+            app:destination="@id/fullVacanciesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/favoriteFragment2"
-        android:name="home.howework.searchjob.presentation.FavoriteFragment"
+        android:name="home.howework.searchjob.presentation.main.FavoriteFragment"
         android:label="FavoriteFragment"
         tools:layout="@layout/favorite_fragment"/>
+    <fragment
+        android:id="@+id/fullVacanciesFragment"
+        android:name="home.howework.searchjob.presentation.main.FullVacanciesFragment"
+        android:label="FullVacanciesFragment"
+        tools:layout="@layout/full_vacancies_fragment">
+        <action
+            android:id="@+id/action_fullVacanciesFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="home.howework.searchjob.presentation.detail.DetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/detail_fragment">
+        <argument
+            android:name="aboutVacancy"
+            app:argType="home.howework.searchjob.data.mocknetwork.model.VacanciesDto" />
+    </fragment>
+
 
 </navigation>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/resume_search_card_view"
+    android:layout_width="140dp"
+    android:layout_height="140dp"
+    android:layout_gravity="center_vertical"
+    android:layout_marginStart="18dp"
+    android:layout_marginEnd="18dp"
+    app:cardCornerRadius="12dp"
+    app:strokeWidth="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="#222325"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="#222325"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/is_offers_resume_search"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/favorite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#222325"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp"
+            android:gravity="left">
+            <TextView
+                android:id="@+id/raise_resume"
+                android:layout_width="116dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:lines="3"
+                android:text="Поднять резюме в поиске"
+                android:textColor="#fff" />
+            <TextView
+                android:id="@+id/raise_resume_btn"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:textColor="#4cb24e"
+                android:text="Поднять"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

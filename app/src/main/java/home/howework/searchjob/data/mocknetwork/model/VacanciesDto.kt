@@ -1,8 +1,10 @@
 package home.howework.searchjob.data.mocknetwork.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
-
+@Parcelize
 data class VacanciesDto(
     var id: String,
     var lookingNumber: Int,
@@ -18,4 +20,4 @@ data class VacanciesDto(
     var description: String,
     var responsibilities: String,
     var questions: ArrayList<String> = arrayListOf()
-)
+):Parcelable

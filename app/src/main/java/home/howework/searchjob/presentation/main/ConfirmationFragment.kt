@@ -1,4 +1,4 @@
-package home.howework.searchjob.presentation
+package home.howework.searchjob.presentation.main
 
 import android.os.Build
 import android.os.Bundle
@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import home.howework.searchjob.databinding.ConfirmationFragmentBinding
+
 
 class ConfirmationFragment:Fragment() {
     private var _binding: ConfirmationFragmentBinding? = null

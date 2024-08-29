@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import home.howework.searchjob.databinding.DetailFragmentBinding
 import home.howework.searchjob.databinding.LoginFragmentBinding
@@ -24,6 +25,9 @@ class DetailFragment:Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val arg: DetailFragmentArgs by navArgs()
+        binding.isBack.setOnClickListener{
+            findNavController().popBackStack()
+        }
         binding.vacancy.text=arg.aboutVacancy.title
     }
 }

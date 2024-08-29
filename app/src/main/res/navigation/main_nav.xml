@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_confirmationFragment_to_searchFragment2"
             app:destination="@id/searchFragment2" />
+        <argument
+            android:name="emailText"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment2"

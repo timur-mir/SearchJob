@@ -9,7 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import home.howework.searchjob.databinding.ConfirmationFragmentBinding
+import home.howework.searchjob.presentation.detail.DetailFragmentArgs
 
 
 class ConfirmationFragment:Fragment() {
@@ -26,9 +28,9 @@ class ConfirmationFragment:Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Build.VERSION_CODES()
-
+        val arg: ConfirmationFragmentArgs by navArgs()
         val sequrityCode = StringBuilder()
+        binding.conformationNotify.text="Отправили код на ${arg.emailText.toString()}"
         binding.editDig2.isCursorVisible = true
         binding.editDig1.requestFocus()
             binding.editDig1.addTextChangedListener(object : TextWatcher {

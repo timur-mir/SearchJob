@@ -7,7 +7,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class VacanciesDto(
     var id: String,
-    var lookingNumber: Int,
+    var lookingNumber: Int=0,
     var title: String,
     var address: AddressDto,
     var company: String,

@@ -7,4 +7,7 @@
     <string name="password_hint">Введите пароль</string>
     <string name="agree_checkbox">Согласен на обработку данных</string>
     <string name="enter">Войти</string>
+    <string name="rise_resume">Поднять резюме в поиске</string>
+    <string name="rise">Поднять</string>
+    <string name="vacancy_near">Вакансии рядом с вами</string>
 </resources>

@@ -2,13 +2,16 @@ package home.howework.searchjob.presentation.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import home.howework.searchjob.R
 import home.howework.searchjob.data.mocknetwork.model.VacanciesDto
 import home.howework.searchjob.databinding.FullVacanciesFragmentBinding
 import home.howework.searchjob.presentation.Utilts.ItemOffsetDecoration
@@ -40,6 +43,26 @@ class FullVacanciesFragment: Fragment() {
             setHasFixedSize(true)
             addItemDecoration(ItemOffsetDecoration(requireContext()))
         }
+        val img = context?.let { AppCompatResources.getDrawable(it, R.drawable.arrow) }
+        binding.fullSearchVacant.setCompoundDrawablesWithIntrinsicBounds(img, null, null, null)
+        binding.fullSearchVacant.setOnTouchListener(object : View.OnTouchListener {
+            override fun onTouch(view: View?, event: MotionEvent?): Boolean {
+                val DRAWABLE_LEFT=0
+                val DRAWABLE_TOP=1
+                val DRAWABLE_RIGHT=2
+                val DRAWABLE_BOTTOM=3
+                if(event!!.action == MotionEvent.ACTION_UP){
+                    if(binding.fullSearchVacant.compoundDrawables[DRAWABLE_LEFT]!=null) {
+                        if ( binding.fullSearchVacant.compoundDrawables[DRAWABLE_LEFT].bounds.width() >= event.rawX -  binding.fullSearchVacant.left ) {
+                           findNavController().popBackStack()
+                            return true
+                        }
+                    }
+                }
+                return false
+            }
+
+        })
     }
     override fun onStart() {
         super.onStart()
@@ -47,6 +70,7 @@ class FullVacanciesFragment: Fragment() {
             mainViewModel.getOffersVacancies()
             mainViewModel.responseOffersVacancies.onEach { list ->
                 vacanciesAdapter.submitList(list.vacancies)
+                binding.vacanciesAmount.text="${list.vacancies.size} вакансий"
             }.launchIn(this)
 
         }

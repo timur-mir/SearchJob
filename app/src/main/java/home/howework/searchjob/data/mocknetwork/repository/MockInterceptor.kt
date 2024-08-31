@@ -80,7 +80,7 @@ const val serverDataJson="""
        "text": "1–3 года"
      },
      "publishedDate": "2024-02-20",
-     "isFavorite": false,
+     "isFavorite": true,
      "salary": {
        "full": "Уровень дохода не указан"
      },

@@ -7,6 +7,7 @@ import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import home.howework.searchjob.R
 import home.howework.searchjob.data.mocknetwork.model.OffersWorkCompaniesDto
 import home.howework.searchjob.data.mocknetwork.model.VacanciesDto
 import home.howework.searchjob.databinding.ListVacanciesBinding
@@ -35,14 +36,18 @@ class VacanciesAdapter(private val OnClick: (VacanciesDto) -> Unit) :
             else {
                 lookCaption.text="Сейчас просматривает ${item.lookingNumber.toString()} человек"
             }
-            isFavorite
+           if( item.isFavorite){
+               isFavorite.setImageResource(R.drawable.heart)
+           }
+            else{
+               isFavorite.setImageResource(R.drawable.heart2)
+            }
+
             vacanctCaption.text=item.title
             townVacant.text=item.address.town.toString()
-            checkCompany
-            portfolioIcon
             portfolioCaption.text=item.experience.text.toString()
             publishedTime.text="Опубликовано ${item.publishedDate.toString()}"
-            publishedTime.setOnClickListener{
+            respond.setOnClickListener{
 
             }
             holder.binding.root.setOnClickListener {

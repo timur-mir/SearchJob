@@ -38,15 +38,26 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
 
-                R.id.responseFragment -> {
-
+                R.id.responsesFragment -> {
+                    if (navController.currentDestination!!.id != R.id.confirmationFragment &&navController.currentDestination!!.id != R.id.loginFragment) {
+                        navController.popBackStack()
+                        navController.navigate(R.id.responsesFragment)
+                    }
                 }
 
                 R.id.messageFragment -> {
+                    if (navController.currentDestination!!.id != R.id.confirmationFragment &&navController.currentDestination!!.id != R.id.loginFragment) {
+                        navController.popBackStack()
+                        navController.navigate(R.id.messageFragment2)
+                    }
 
                 }
 
                 R.id.profileFragment -> {
+                    if (navController.currentDestination!!.id != R.id.confirmationFragment &&navController.currentDestination!!.id != R.id.loginFragment) {
+                        navController.popBackStack()
+                        navController.navigate(R.id.profileFragment2)
+                    }
 
                 }
 

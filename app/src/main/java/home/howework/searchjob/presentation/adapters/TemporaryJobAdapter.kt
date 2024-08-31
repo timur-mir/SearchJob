@@ -1,5 +1,6 @@
 package home.howework.searchjob.presentation.adapters
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -25,6 +26,7 @@ class TemporaryJobAdapter (private val OnItemClick: (link: String) -> Unit):
         )
     }
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onBindViewHolder(
         item: OffersMain.TemporaryJob,
         holder: TemporaryJobAdapterHolder,

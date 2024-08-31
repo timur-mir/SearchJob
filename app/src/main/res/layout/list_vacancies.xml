@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/vacancies_card_view"
-    android:layout_width="match_parent"
-    android:layout_height="246dp"
-    android:layout_gravity="center_vertical"
-    android:layout_marginStart="18dp"
-    android:layout_marginEnd="18dp"
+    android:layout_width="320dp"
+    android:layout_height="230dp"
+    android:background="#222325"
     app:cardCornerRadius="12dp"
     app:strokeWidth="0dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="246dp"
+        android:layout_height="match_parent"
         android:background="#222325"
         android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="36dp"
+        android:layout_marginTop="8dp"
         android:background="#222325"
         android:orientation="horizontal">
         <TextView
             android:id="@+id/look_caption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
+            android:layout_marginStart="18dp"
             android:layout_marginTop="10dp"
             android:text="Сейчас просматривают"
             android:textColor="#015905" />
 
         <ImageView
             android:id="@+id/is_favorite"
-            android:layout_width="38dp"
-            android:layout_height="38dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_gravity="center"
-            android:layout_marginStart="42dp"
-            android:src="@drawable/favorite"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="30dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="48dp"
             android:background="#222325"
             android:orientation="vertical">
 
@@ -50,14 +50,15 @@
                 android:id="@+id/vacanct_caption"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
+                android:layout_marginStart="18dp"
+                android:textSize="16sp"
                 android:text="Дизайнер"
                 android:textColor="#FFF" />
             <TextView
                 android:id="@+id/town_vacant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
+                android:layout_marginStart="18dp"
                 android:layout_marginTop="10dp"
                 android:text="Минск"
                 android:textColor="#FFF" />
@@ -71,58 +72,59 @@
                 android:id="@+id/company_caption"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
+                android:layout_marginStart="18dp"
                 android:layout_marginTop="10dp"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:text="Мобирикс"
                 android:textColor="#FFF" />
 
             <ImageView
                 android:id="@+id/check_company"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
                 android:layout_gravity="center"
-                android:layout_marginStart="20dp"
-                android:src="@drawable/favorite"
+                android:layout_marginStart="14dp"
+                android:src="@drawable/checked"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="36dp"
+            android:layout_height="26dp"
             android:background="#222325"
+            android:layout_gravity="center"
             android:orientation="horizontal">
             <ImageView
                 android:id="@+id/portfolio_icon"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="36dp"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="18dp"
                 android:layout_gravity="center"
-                android:src="@drawable/favorite"
+                android:src="@drawable/experience"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
             <TextView
                 android:id="@+id/portfolio_caption"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="10dp"
-                android:textSize="12sp"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center"
+                android:textSize="14sp"
                 android:text="Опыт от 1 года до 3 лет"
                 android:textColor="#FFF" />
 
         </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="14dp"
+        android:layout_height="18dp"
         android:background="#222325"
         android:orientation="horizontal">
         <TextView
             android:id="@+id/published_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
-            android:textSize="12sp"
+            android:layout_marginStart="18dp"
+            android:textSize="14sp"
             android:textColor="#858688"
             android:text="Опубликовано 20 февраля">
         </TextView>
@@ -133,21 +135,20 @@
         android:background="#222325"
         android:gravity="center"
         android:orientation="horizontal">
-        <androidx.appcompat.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/respond"
-            android:layout_width="300dp"
+            android:layout_width="296dp"
             android:padding="0dp"
             android:text="Откликнуться"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="6dp"
             android:textColor="#fff"
+            android:textSize="14sp"
             android:gravity="center"
             android:background="@drawable/button_shape"
             android:layout_height="32dp">
 
-        </androidx.appcompat.widget.AppCompatButton>
+        </androidx.appcompat.widget.AppCompatTextView>
     </LinearLayout>
 
     </LinearLayout>
-
-
 </com.google.android.material.card.MaterialCardView>

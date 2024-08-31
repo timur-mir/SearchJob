@@ -60,6 +60,21 @@
             android:name="aboutVacancy"
             app:argType="home.howework.searchjob.data.mocknetwork.model.VacanciesDto" />
     </fragment>
+    <fragment
+        android:id="@+id/responsesFragment"
+        android:name="home.howework.searchjob.presentation.ResponsesFragment"
+        android:label="fragment_responses"
+        tools:layout="@layout/fragment_responses" />
+    <fragment
+        android:id="@+id/messageFragment2"
+        android:name="home.howework.searchjob.presentation.main.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" />
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="home.howework.searchjob.presentation.main.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 
 
 </navigation>

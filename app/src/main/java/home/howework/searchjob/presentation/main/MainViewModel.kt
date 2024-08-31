@@ -19,8 +19,8 @@ class MainViewModel() : ViewModel() {
         data
     )
     val responseOffersVacancies = _responseOffersVacancies.asStateFlow()
-    val data2 =
-        arrayListOf(OffersMain.VacanciesNear("", "", ""), OffersMain.ResumeRaise("", "", ""))
+    val data2 =ArrayList<OffersMain>()
+
     private val _responseOffersMain = MutableStateFlow<List<OffersMain>>(
         data2
     )
@@ -31,12 +31,12 @@ class MainViewModel() : ViewModel() {
             remoteMockRepo.getOffersVacancies { objectInfo ->
                 _responseOffersVacancies.value = objectInfo
                 val offersMain: MutableList<OffersMain> = mutableListOf(
-                    OffersMain.ResumeRaise(
+                    OffersMain.VacanciesNear(
                         id = objectInfo.offers[0].id.toString(),
                         title = objectInfo.offers[0].title.toString(),
                         link = objectInfo.offers[0].link.toString(),
                     ),
-                    OffersMain.VacanciesNear(
+                    OffersMain.ResumeRaise(
                         id = objectInfo.offers[1].id.toString(),
                         title = objectInfo.offers[1].title.toString(),
                         link = objectInfo.offers[1].link.toString(),

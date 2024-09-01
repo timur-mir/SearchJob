@@ -10,16 +10,20 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
-class MainViewModel() : ViewModel() {
-    private val offersWorkCompaniesRepository = OffersWorkVacanciesImpl()
-    val remoteMockRepo = GetOffersWorkCompaniesUseCase(offersWorkCompaniesRepository)
+class MainViewModel(
+    private val offersWorkCompaniesRepository: OffersWorkVacanciesImpl = OffersWorkVacanciesImpl(),
+    private val remoteMockRepo: GetOffersWorkCompaniesUseCase = GetOffersWorkCompaniesUseCase(
+        offersWorkCompaniesRepository
+    )
+) : ViewModel() {
+
 
     val data = OffersWorkCompaniesDto()
     private val _responseOffersVacancies = MutableStateFlow<OffersWorkCompaniesDto>(
         data
     )
     val responseOffersVacancies = _responseOffersVacancies.asStateFlow()
-    val data2 =ArrayList<OffersMain>()
+    val data2 = ArrayList<OffersMain>()
 
     private val _responseOffersMain = MutableStateFlow<List<OffersMain>>(
         data2

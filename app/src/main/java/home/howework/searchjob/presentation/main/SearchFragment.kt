@@ -13,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import home.howework.searchjob.data.mocknetwork.model.VacanciesDto
 import home.howework.searchjob.databinding.SearchFragmentBinding
+import home.howework.searchjob.di.DaggerAppComponent
 import home.howework.searchjob.presentation.OffersMainAdapter
 import home.howework.searchjob.presentation.Utilts.ItemOffsetDecoration
 import home.howework.searchjob.presentation.VacanciesAdapter
@@ -35,7 +36,9 @@ class SearchFragment : Fragment() {
 
 
 
-    private val mainViewModel: MainViewModel by viewModels()
+    private val mainViewModel: MainViewModel by viewModels{
+        DaggerAppComponent.create().mainViewModelFactory()
+    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

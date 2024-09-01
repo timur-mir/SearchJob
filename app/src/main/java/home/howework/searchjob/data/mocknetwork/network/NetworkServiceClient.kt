@@ -1,6 +1,7 @@
 package home.howework.searchjob.data.mocknetwork.repository
 
 import home.howework.searchjob.data.mocknetwork.model.OffersWorkCompaniesDto
+import home.howework.searchjob.data.mocknetwork.network.MockInterceptor
 import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.Retrofit

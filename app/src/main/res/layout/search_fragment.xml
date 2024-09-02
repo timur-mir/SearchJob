@@ -30,7 +30,9 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="6dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/settings"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/search_vacant"
             app:layout_constraintTop_toTopOf="@+id/search_vacant" />
 
@@ -38,8 +40,9 @@
             android:id="@+id/top_offers"
             android:layout_width="match_parent"
             android:layout_height="146dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="12dp"
             android:layout_marginTop="8dp"
+            android:paddingVertical="0dp"
             android:orientation="horizontal"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
@@ -55,21 +58,23 @@
         android:id="@+id/vacancies_for_your"
         android:layout_width="match_parent"
         android:layout_height="24dp"
-        android:layout_marginStart="22dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="4dp"
         android:layout_marginTop="14dp"
         android:text="Вакансии для вас"
         android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/level_1" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/vacancies_3"
         android:layout_width="match_parent"
-        android:layout_height="360dp"
-        android:layout_marginStart="20dp"
+        android:layout_height="352dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="14dp"
+        android:paddingVertical="0dp"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,21 +87,13 @@
         android:id="@+id/get_all_vacancies"
         android:layout_width="320dp"
         android:layout_height="38dp"
-
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
         android:background="@drawable/edit_shape"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/vacancies_3">
 
     </androidx.appcompat.widget.AppCompatButton>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="24dp" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

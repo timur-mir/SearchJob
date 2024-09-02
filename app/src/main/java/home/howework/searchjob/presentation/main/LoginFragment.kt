@@ -48,7 +48,8 @@ class LoginFragment:Fragment() {
                     binding.nextAction.isEnabled = false
                     flagBackground=true
                     binding.editField.background=getDrawable(requireContext(),R.drawable.search_shape)
-                    binding.atentionMessage.visibility=View.VISIBLE
+                    binding.attentionMessage.visibility=View.VISIBLE
+                   // binding.editField.error="Вы ввели неправильный формат почты"
                 }
             }
         binding.editField.setOnTouchListener(object :OnTouchListener{
@@ -80,7 +81,7 @@ class LoginFragment:Fragment() {
                 binding.editField.background =
                     getDrawable(requireContext(), R.drawable.custom_border)
                 binding.editField.text.clear()
-                binding.atentionMessage.visibility=View.INVISIBLE
+                binding.attentionMessage.visibility=View.INVISIBLE
                 flagBackground=false
             }
             binding.nextAction.isEnabled = true

@@ -81,7 +81,7 @@ class DetailFragment:Fragment() {
             RelativeLayout.LayoutParams.WRAP_CONTENT
         )
         params.leftMargin = 0
-        params.topMargin = 10
+        params.topMargin = 12
 
                         if (layoutQuestionContainerLastView != null) {
                             params.addRule(RelativeLayout.BELOW, layoutQuestionContainerLastView.id)

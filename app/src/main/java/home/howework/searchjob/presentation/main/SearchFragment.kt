@@ -78,7 +78,7 @@ class SearchFragment : Fragment() {
             }.launchIn(this)
             mainViewModel.responseOffersVacancies.onEach { list ->
                 val listVacancies=list.vacancies
-                binding.getAllVacancies.text="Ещё ${listVacancies.size-3} для вас"
+                binding.getAllVacancies.text="Ещё ${listVacancies.size-3} вакансии"
                 vacanciesAdapter.submitList(listVacancies.take(3))
             }.launchIn(this)
 

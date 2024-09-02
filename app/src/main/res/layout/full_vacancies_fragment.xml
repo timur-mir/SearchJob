@@ -16,10 +16,10 @@
 
         <EditText
             android:id="@+id/full_search_vacant"
-            android:layout_width="280dp"
-            android:layout_height="40dp"
+            android:layout_width="276dp"
+            android:layout_height="42dp"
             android:gravity="center"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="8dp"
             android:background="@drawable/custom_border"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.144"
@@ -32,8 +32,9 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/full_get_settings"
             android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_height="42dp"
             android:layout_marginStart="6dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/settings"
             app:layout_constraintStart_toEndOf="@+id/full_search_vacant"
             app:layout_constraintTop_toTopOf="@+id/full_search_vacant" />
@@ -51,8 +52,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="36dp"
-            android:gravity="center"
             android:orientation="horizontal"
+            android:gravity="fill_horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -61,7 +62,7 @@
                 android:id="@+id/vacancies_amount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
+                android:layout_marginStart="20dp"
                 android:text="145 вакансий"
                 android:textColor="#fff" />
 
@@ -69,7 +70,7 @@
                 android:id="@+id/by_correspondence"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="80dp"
+                android:layout_marginStart="106dp"
                 android:text="По соответствию"
                 android:textColor="#2b7efe" />
 
@@ -78,6 +79,7 @@
                 android:layout_width="22dp"
                 android:layout_height="22dp"
                 android:layout_marginStart="8dp"
+                android:layout_marginEnd="12dp"
                 android:src="@drawable/sort"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -91,7 +93,8 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/full_level_2"
         tools:itemCount="5"

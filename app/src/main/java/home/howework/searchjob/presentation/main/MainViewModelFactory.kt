@@ -9,7 +9,7 @@ class MainViewModelFactory@Inject constructor (private val mainViewModel: MainVi
         if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
             return mainViewModel as T
         }
-        throw IllegalAccessException("Unknown class name")
+        throw IllegalAccessException("Неизвестный класс")
 
     }
 }

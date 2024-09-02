@@ -26,6 +26,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:textColorHint="#858688"
+            android:textColor="#fff"
             android:hint="Должность,ключевые слова" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -82,9 +83,6 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/full_vacancies"
         android:layout_width="match_parent"

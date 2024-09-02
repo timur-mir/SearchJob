@@ -6,7 +6,7 @@
     android:layout_height="120dp"
     android:background="#222325"
     android:layout_gravity="center_vertical"
-    app:cardCornerRadius="12dp"
+    app:cardCornerRadius="14dp"
     app:strokeWidth="0dp">
 
     <LinearLayout

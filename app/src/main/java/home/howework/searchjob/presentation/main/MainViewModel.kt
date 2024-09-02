@@ -9,8 +9,9 @@ import home.howework.searchjob.data.mocknetwork.model.OffersMain
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class MainViewModel(
+class MainViewModel (
     private val offersWorkCompaniesRepository: OffersWorkVacanciesImpl = OffersWorkVacanciesImpl(),
     private val remoteMockRepo: GetOffersWorkCompaniesUseCase = GetOffersWorkCompaniesUseCase(
         offersWorkCompaniesRepository

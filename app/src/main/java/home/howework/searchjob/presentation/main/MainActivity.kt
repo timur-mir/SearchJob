@@ -2,6 +2,7 @@ package home.howework.searchjob.presentation.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -19,7 +20,17 @@ class MainActivity : AppCompatActivity() {
         val bottomNavigationView = binding.panelNavigationMain
         val navController = findNavController(R.id.frag_cont)
         bottomNavigationView.setupWithNavController(navController)
+        val menu = bottomNavigationView.menu
+//        for (i in 0 until menu.size()) {
+//            val menuItem = menu.getItem(i)
+//            menuItem.setActionView(R.layout.custom_menu_item)
+//            val textView = menuItem.actionView?.findViewById<TextView>(R.id.menu_item_text)
+//            if (textView != null) {
+//                textView.text = menuItem.title
+//            }
+//        }
         panelNav = bottomNavigationView
+
         bottomNavigationView.setOnNavigationItemSelectedListener { it ->
             when (it.itemId) {
 

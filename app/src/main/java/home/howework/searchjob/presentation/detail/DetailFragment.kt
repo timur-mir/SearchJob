@@ -89,7 +89,7 @@ class DetailFragment:Fragment() {
                            // rowQuestion.id = 1 as Int
                             /////////////////////////////
                             val paramsT = RelativeLayout.LayoutParams(
-                                RelativeLayout.LayoutParams.MATCH_PARENT,
+                                RelativeLayout.LayoutParams.WRAP_CONTENT,
                                 RelativeLayout.LayoutParams.WRAP_CONTENT
                             )
                             paramsT.leftMargin = convertToPixels(requireContext(),20).toInt()
@@ -120,7 +120,7 @@ class DetailFragment:Fragment() {
                             // rowQuestion.id = 1 as Int
                             /////////////////////////////
                             val paramsT = RelativeLayout.LayoutParams(
-                                RelativeLayout.LayoutParams.MATCH_PARENT,
+                                RelativeLayout.LayoutParams.WRAP_CONTENT,
                                 RelativeLayout.LayoutParams.WRAP_CONTENT
                             )
                             paramsT.leftMargin = convertToPixels(requireContext(),20).toInt()

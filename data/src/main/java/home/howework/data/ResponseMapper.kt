@@ -10,7 +10,7 @@ import home.howework.domain.entities.VacanciesDto
 
 fun OffersWorkCompaniesResponse.mapToOffersWorkCompaniesDto(): OffersWorkCompaniesDto {
    return with(this){OffersWorkCompaniesDto(
-       offers.map{it->OffersDto(it.id,it.title,it.title)} as ArrayList<OffersDto>,vacancies.map{ it->
+       offers.map{it->OffersDto(it.id,it.title,it.link)} as ArrayList<OffersDto>,vacancies.map{ it->
            VacanciesDto(id = it.id, lookingNumber = it.lookingNumber,
            title = it.title, address = AddressDto( it.address.town,it.address.street,it.address.house), company =it.company,
                experience = ExperienceDto( it.experience.previewText,it.experience.text),

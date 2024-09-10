@@ -28,7 +28,8 @@ class SearchFragment : Fragment() {
         VacanciesAdapter { vacancy->  }
     private val offersMainAdapter =
         OffersMainAdapter { link ->
-            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
+            val browserIntent = Intent.makeMainSelectorActivity(Intent.ACTION_MAIN, Intent.CATEGORY_APP_BROWSER)
+            browserIntent.data=Uri.parse(link)
             startActivity(browserIntent)
         }
 

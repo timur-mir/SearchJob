@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="main_nav_graph" type="id" />
+    <item name="loginFragment" type="id" />
+    <item name="action_loginFragment_to_confirmationFragment" type="id" />
+    <item name="confirmationFragment" type="id" />
+    <item name="action_confirmationFragment_to_searchFragment2" type="id" />
+    <item name="searchFragment2" type="id" />
+    <item name="action_searchFragment2_to_fullVacanciesFragment" type="id" />
+    <item name="fullVacanciesFragment" type="id" />
+    <item name="favoriteFragment2" type="id" />
+    <item name="action_fullVacanciesFragment_to_detailFragment" type="id" />
+    <item name="detailFragment" type="id" />
+    <item name="messageFragment2" type="id" />
+    <item name="profileFragment2" type="id" />
+</resources>

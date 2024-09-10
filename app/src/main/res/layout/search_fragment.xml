@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="@id/top_level">
 
         <androidx.appcompat.widget.SearchView
-            android:id="@+id/search_vacant"
+            android:id="@+id/search_vacant_view"
             android:layout_width="280dp"
             android:layout_height="40dp"
             android:layout_marginStart="20dp"
@@ -33,8 +33,8 @@
             android:layout_marginEnd="20dp"
             android:background="@drawable/settings"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/search_vacant"
-            app:layout_constraintTop_toTopOf="@+id/search_vacant" />
+            app:layout_constraintStart_toEndOf="@+id/search_vacant_view"
+            app:layout_constraintTop_toTopOf="@+id/search_vacant_view" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/top_offers"
@@ -48,7 +48,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/search_vacant"
+            app:layout_constraintTop_toBottomOf="@+id/search_vacant_view"
             tools:itemCount="5"
             tools:listitem="@layout/vacancies_near_list" />
 

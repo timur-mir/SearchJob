@@ -1,6 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/work_nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="home.howework.searchjob.features.uselogin.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/login_fragment">
+        <action
+            android:id="@+id/action_loginFragment_to_confirmationFragment"
+            app:destination="@id/confirmationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/confirmationFragment"
+        android:name="home.howework.searchjob.features.useconfirmation.ConfirmationFragment"
+        android:label="ConfirmationFragment"
+        tools:layout="@layout/confirmation_fragment">
+        <action
+            android:id="@+id/action_confirmationFragment_to_searchFragment2"
+            app:destination="@id/searchFragment2" />
+        <argument
+            android:name="emailText"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment2"
+        android:name="home.howework.searchjob.features.usesearch.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/search_fragment">
+        <action
+            android:id="@+id/action_searchFragment2_to_fullVacanciesFragment"
+            app:destination="@id/fullVacanciesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment2"
+        android:name="home.howework.searchjob.features.usefavorite.FavoriteFragment"
+        android:label="FavoriteFragment"
+        tools:layout="@layout/favorite_fragment"/>
+    <fragment
+        android:id="@+id/fullVacanciesFragment"
+        android:name="home.howework.searchjob.features.usevacancies.FullVacanciesFragment"
+        android:label="FullVacanciesFragment"
+        tools:layout="@layout/full_vacancies_fragment">
+        <action
+            android:id="@+id/action_fullVacanciesFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="home.howework.searchjob.features.usedetail.DetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/detail_fragment">
+        <argument
+            android:name="aboutVacancy"
+            app:argType="home.howework.domain.entities.VacanciesDto" />
+    </fragment>
+    <fragment
+        android:id="@+id/responsesFragment"
+        android:name="home.howework.searchjob.features.useresponse.ResponsesFragment"
+        android:label="fragment_responses"
+        tools:layout="@layout/fragment_responses" />
+    <fragment
+        android:id="@+id/messageFragment2"
+        android:name="home.howework.searchjob.features.usemessage.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" />
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="home.howework.searchjob.features.useprofile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+
 
 </navigation>

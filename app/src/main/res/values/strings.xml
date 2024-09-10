@@ -10,4 +10,5 @@
     <string name="rise_resume">Поднять резюме в поиске</string>
     <string name="rise">Поднять</string>
     <string name="vacancy_near">Вакансии рядом с вами</string>
+    <string name="title_core">Module Title</string>
 </resources>

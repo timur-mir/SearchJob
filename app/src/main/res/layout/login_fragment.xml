@@ -10,7 +10,7 @@
         android:id="@+id/head_form"
         android:layout_width="0dp"
         android:layout_height="49dp"
-        android:layout_marginStart="14dp"
+
         android:layout_marginTop="30dp"
         android:gravity="center_vertical"
         android:text="Вход в личный кабинет"
@@ -34,8 +34,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
             android:backgroundTint="#222235"
             app:cardCornerRadius="12dp"
             app:strokeWidth="0dp">
@@ -146,8 +144,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
+
             android:background="#222235"
             android:backgroundTint="#222235"
             app:cardCornerRadius="12dp"

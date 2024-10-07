@@ -24,9 +24,21 @@ android {
     }
 
     buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+            manifestPlaceholders=[appName:"HeadHanterPrototypeDebug"]
+        }
+        qa {
+            initWith debug
+            applicationIdSuffix ".qa"
+            manifestPlaceholders=[appName:"HeadHanterPrototypeTest"]
+        }
         release {
+            applicationIdSuffix ".release"
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            manifestPlaceholders=[appName:"HeadHanterPrototypeRelease"]
+            signingConfig signingConfigs.debug
         }
     }
     compileOptions {

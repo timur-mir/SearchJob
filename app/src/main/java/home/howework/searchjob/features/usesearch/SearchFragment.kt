@@ -16,6 +16,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import home.howework.searchjob.databinding.SearchFragmentBinding
 import home.howework.searchjob.features.usesearch.adapters.OffersMainAdapter
 import home.howework.searchjob.Utilts.ItemOffsetDecoration
+import home.howework.searchjob.Utilts.ItemOffsetDecoration2
 import home.howework.searchjob.features.usesearch.adapters.VacanciesAdapter
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -57,7 +58,7 @@ class SearchFragment : Fragment() {
             layoutManager = LinearLayoutManager(requireContext()).apply {
                 orientation = LinearLayoutManager.HORIZONTAL
                 setHasFixedSize(true)
-                addItemDecoration(ItemOffsetDecoration(requireContext()))
+                addItemDecoration(ItemOffsetDecoration2(requireContext()))
             }
         }
         binding.getAllVacancies.setOnClickListener{

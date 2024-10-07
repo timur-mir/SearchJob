@@ -15,17 +15,20 @@ class ItemOffsetDecoration(private val context: Context): RecyclerView.ItemDecor
         state: RecyclerView.State
     ) {
         val offset = 8.fromDpToPixels(context)
+
         with(outRect) {
-            left = offset
+            left = 0
             top = offset
             bottom = offset
-            right = offset
+            right = 0
         }
     }
 
-    private fun Int.fromDpToPixels(context: Context): Int {
-        val density = context.resources.displayMetrics.densityDpi
-        val pixelInDp = density / DisplayMetrics.DENSITY_DEFAULT
-        return this * pixelInDp
+    companion object {
+       fun Int.fromDpToPixels(context: Context): Int {
+            val density = context.resources.displayMetrics.densityDpi
+            val pixelInDp = density / DisplayMetrics.DENSITY_DEFAULT
+            return this * pixelInDp
+        }
     }
 }

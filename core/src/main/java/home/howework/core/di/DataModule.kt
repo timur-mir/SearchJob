@@ -11,7 +11,6 @@ import home.howework.domain.OffersWorkCompaniesRepository
 @Module
 @InstallIn(SingletonComponent::class)
 class DataModule {
-
     @Provides
     fun provideNetworkServiceClient(): NetworkServiceClient {
         return NetworkServiceClient()
